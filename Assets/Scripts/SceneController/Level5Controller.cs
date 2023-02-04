@@ -1,16 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Level5Controller : MonoBehaviour
+public class Level5Controller : BaseLevelController
 {
-	// Start is called before the first frame update
-	void Start()
-	{
-		
-	}
-
-	// Update is called once per frame
-	void Update()
+	protected override void UpdateCore()
 	{
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
