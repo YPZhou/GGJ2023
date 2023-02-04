@@ -13,6 +13,16 @@ public class GameTitleController : MonoBehaviour
 
 	public void StartGame()
 	{
-		SceneManager.LoadScene("Level1");
+		SceneManager.LoadScene("SelectLevel");
 	}
+
+	public void GameOver()
+	{
+		#if UNITY_EDITOR
+		Application.Quit();
+		#else
+		
+		#endif
+	}
+	
 }
