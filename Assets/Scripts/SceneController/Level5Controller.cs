@@ -8,18 +8,18 @@ public class Level5Controller : BaseLevelController
 		base.InitializeLevelComponents();
 
 		var input = Instantiate(inputComponent).GetComponent<InputComponent>();
-		input.SetCoords(10, 1);
+		input.SetCoords(13, 1);
 		input.SetLevelBottomLeftPosition(BottomLeftPosition);
 		input.RotateClockwise();
 		CircuitComponents.Add(input);
 
 		input = Instantiate(inputComponent).GetComponent<InputComponent>();
-		input.SetCoords(9, 1);
+		input.SetCoords(11, 1);
 		input.SetLevelBottomLeftPosition(BottomLeftPosition);
 		CircuitComponents.Add(input);
 
 		input = Instantiate(inputComponent).GetComponent<InputComponent>();
-		input.SetCoords(11, 5);
+		input.SetCoords(15, 5);
 		input.SetLevelBottomLeftPosition(BottomLeftPosition);
 		input.RotateClockwise();
 		input.RotateClockwise();
@@ -27,7 +27,7 @@ public class Level5Controller : BaseLevelController
 		CircuitComponents.Add(input);
 
 		var output = Instantiate(outputComponent).GetComponent<OutputComponent>();
-		output.SetCoords(2, 1);
+		output.SetCoords(3, 1);
 		output.SetLevelBottomLeftPosition(BottomLeftPosition);
 		CircuitComponents.Add(output);
 
@@ -37,7 +37,7 @@ public class Level5Controller : BaseLevelController
 		CircuitComponents.Add(output);
 
 		BaseCircuitComponent wire = Instantiate(turningWireComponent).GetComponent<TurningWireComponent>();
-		wire.SetCoords(11, 1);
+		wire.SetCoords(15, 1);
 		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
 		wire.RotateClockwise();
 		wire.RotateClockwise();
@@ -45,7 +45,7 @@ public class Level5Controller : BaseLevelController
 		CircuitComponents.Add(wire);
 
 		wire = Instantiate(turningWireComponent).GetComponent<TurningWireComponent>();
-		wire.SetCoords(11, 3);
+		wire.SetCoords(15, 3);
 		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
 		wire.RotateClockwise();
 		wire.RotateClockwise();
@@ -58,7 +58,7 @@ public class Level5Controller : BaseLevelController
 		CircuitComponents.Add(wire);
 
 		wire = Instantiate(turningWireComponent).GetComponent<TurningWireComponent>();
-		wire.SetCoords(5, 5);
+		wire.SetCoords(6, 5);
 		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
 		wire.RotateClockwise();
 		wire.RotateClockwise();
@@ -88,17 +88,62 @@ public class Level5Controller : BaseLevelController
 		CircuitComponents.Add(wire);
 
 		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
+		wire.SetCoords(15, 2);
+		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
+		CircuitComponents.Add(wire);
+
+		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
+		wire.SetCoords(14, 5);
+		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
+		wire.RotateClockwise();
+		CircuitComponents.Add(wire);
+
+		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
+		wire.SetCoords(14, 3);
+		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
+		wire.RotateClockwise();
+		CircuitComponents.Add(wire);
+
+		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
+		wire.SetCoords(14, 1);
+		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
+		wire.RotateClockwise();
+		CircuitComponents.Add(wire);
+
+		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
+		wire.SetCoords(13, 4);
+		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
+		CircuitComponents.Add(wire);
+
+		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
+		wire.SetCoords(12, 5);
+		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
+		wire.RotateClockwise();
+		CircuitComponents.Add(wire);
+
+		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
+		wire.SetCoords(11, 4);
+		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
+		CircuitComponents.Add(wire);
+
+		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
 		wire.SetCoords(11, 2);
 		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
 		CircuitComponents.Add(wire);
 
 		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
-		wire.SetCoords(10, 4);
+		wire.SetCoords(10, 5);
 		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
+		wire.RotateClockwise();
 		CircuitComponents.Add(wire);
 
 		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
 		wire.SetCoords(9, 4);
+		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
+		CircuitComponents.Add(wire);
+
+		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
+		wire.SetCoords(9, 3);
 		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
 		CircuitComponents.Add(wire);
 
@@ -108,18 +153,15 @@ public class Level5Controller : BaseLevelController
 		CircuitComponents.Add(wire);
 
 		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
-		wire.SetCoords(8, 4);
+		wire.SetCoords(8, 1);
 		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
+		wire.RotateClockwise();
 		CircuitComponents.Add(wire);
 
 		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
-		wire.SetCoords(8, 3);
+		wire.SetCoords(8, 5);
 		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
-		CircuitComponents.Add(wire);
-
-		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
-		wire.SetCoords(8, 2);
-		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
+		wire.RotateClockwise();
 		CircuitComponents.Add(wire);
 
 		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
@@ -138,24 +180,30 @@ public class Level5Controller : BaseLevelController
 		CircuitComponents.Add(wire);
 
 		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
-		wire.SetCoords(6, 1);
+		wire.SetCoords(6, 4);
+		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
+		CircuitComponents.Add(wire);
+
+		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
+		wire.SetCoords(6, 3);
+		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
+		CircuitComponents.Add(wire);
+
+		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
+		wire.SetCoords(6, 2);
+		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
+		CircuitComponents.Add(wire);
+
+		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
+		wire.SetCoords(5, 5);
 		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
 		wire.RotateClockwise();
 		CircuitComponents.Add(wire);
 
 		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
-		wire.SetCoords(5, 4);
+		wire.SetCoords(5, 1);
 		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
-		CircuitComponents.Add(wire);
-
-		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
-		wire.SetCoords(5, 3);
-		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
-		CircuitComponents.Add(wire);
-
-		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
-		wire.SetCoords(5, 2);
-		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
+		wire.RotateClockwise();
 		CircuitComponents.Add(wire);
 
 		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
@@ -178,13 +226,20 @@ public class Level5Controller : BaseLevelController
 		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
 		CircuitComponents.Add(wire);
 
+		wire = Instantiate(turningWireComponent).GetComponent<TurningWireComponent>();
+		wire.SetCoords(3, 2);
+		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
+		wire.RotateClockwise();
+		wire.RotateClockwise();
+		CircuitComponents.Add(wire);
+
 		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
 		wire.SetCoords(2, 5);
 		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
 		wire.RotateClockwise();
 		CircuitComponents.Add(wire);
 
-		wire = Instantiate(wireComponent).GetComponent<WireComponent>();
+		wire = Instantiate(turningWireComponent).GetComponent<TurningWireComponent>();
 		wire.SetCoords(2, 2);
 		wire.SetLevelBottomLeftPosition(BottomLeftPosition);
 		CircuitComponents.Add(wire);
@@ -205,7 +260,7 @@ public class Level5Controller : BaseLevelController
 		CircuitComponents.Add(node);
 
 		node = Instantiate(threeWayNodeComponent).GetComponent<ThreeWayNodeComponent>();
-		node.SetCoords(10, 5);
+		node.SetCoords(13, 5);
 		node.SetLevelBottomLeftPosition(BottomLeftPosition);
 		node.RotateClockwise();
 		node.RotateClockwise();
@@ -213,12 +268,12 @@ public class Level5Controller : BaseLevelController
 		CircuitComponents.Add(node);
 
 		node = Instantiate(threeWayNodeComponent).GetComponent<ThreeWayNodeComponent>();
-		node.SetCoords(10, 3);
+		node.SetCoords(13, 3);
 		node.SetLevelBottomLeftPosition(BottomLeftPosition);
 		CircuitComponents.Add(node);
 
 		node = Instantiate(threeWayNodeComponent).GetComponent<ThreeWayNodeComponent>();
-		node.SetCoords(5, 1);
+		node.SetCoords(6, 1);
 		node.SetLevelBottomLeftPosition(BottomLeftPosition);
 		node.RotateClockwise();
 		node.RotateClockwise();
@@ -248,28 +303,28 @@ public class Level5Controller : BaseLevelController
 		CircuitComponents.Add(node);
 
 		node = Instantiate(turningNodeComponent).GetComponent<TurningNodeComponent>();
+		node.SetCoords(11, 5);
+		node.SetLevelBottomLeftPosition(BottomLeftPosition);
+		node.RotateClockwise();
+		node.RotateClockwise();
+		node.RotateClockwise();
+		CircuitComponents.Add(node);
+
+		node = Instantiate(turningNodeComponent).GetComponent<TurningNodeComponent>();
+		node.SetCoords(11, 3);
+		node.SetLevelBottomLeftPosition(BottomLeftPosition);
+		node.RotateClockwise();
+		node.RotateClockwise();
+		node.RotateClockwise();
+		CircuitComponents.Add(node);
+
+		node = Instantiate(turningNodeComponent).GetComponent<TurningNodeComponent>();
 		node.SetCoords(9, 5);
 		node.SetLevelBottomLeftPosition(BottomLeftPosition);
-		node.RotateClockwise();
-		node.RotateClockwise();
-		node.RotateClockwise();
 		CircuitComponents.Add(node);
 
 		node = Instantiate(turningNodeComponent).GetComponent<TurningNodeComponent>();
-		node.SetCoords(9, 3);
-		node.SetLevelBottomLeftPosition(BottomLeftPosition);
-		node.RotateClockwise();
-		node.RotateClockwise();
-		node.RotateClockwise();
-		CircuitComponents.Add(node);
-
-		node = Instantiate(turningNodeComponent).GetComponent<TurningNodeComponent>();
-		node.SetCoords(8, 5);
-		node.SetLevelBottomLeftPosition(BottomLeftPosition);
-		CircuitComponents.Add(node);
-
-		node = Instantiate(turningNodeComponent).GetComponent<TurningNodeComponent>();
-		node.SetCoords(8, 1);
+		node.SetCoords(9, 1);
 		node.SetLevelBottomLeftPosition(BottomLeftPosition);
 		node.RotateClockwise();
 		CircuitComponents.Add(node);

@@ -37,6 +37,10 @@ public abstract class BaseCircuitComponent : MonoBehaviour
 				previousRotationCount = rotationCount;
 			}
 		}
+		else
+		{
+			transform.localRotation = Quaternion.AngleAxis(90 * rotationCount, Vector3.back);
+		}
 
 		UpdateCore();
 	}
