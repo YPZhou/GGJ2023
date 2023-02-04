@@ -3,10 +3,7 @@ using static Constants;
 
 public class ThreeWayWireComponent : BaseCircuitComponent
 {
-	public ThreeWayWireComponent(int coordX, int coordY)
-		: base(ComponentType.WIRE, coordX, coordY)
-	{
-	}
+	public override ComponentType ComponentType => ComponentType.WIRE;
 
 	protected override void SetupConnectedTiles()
 	{

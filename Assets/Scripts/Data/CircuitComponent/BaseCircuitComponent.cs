@@ -4,16 +4,32 @@ using System.Linq;
 using UnityEngine;
 using static Constants;
 
-public abstract class BaseCircuitComponent
+public abstract class BaseCircuitComponent : MonoBehaviour
 {
-	public BaseCircuitComponent(ComponentType componentType, int coordX, int coordY)
+	protected void Awake()
 	{
-		ComponentType = componentType;
-		TileCoords = new Tuple<int, int>(coordX, coordY);
 		SetupConnectedTiles();
 	}
 
-	public readonly ComponentType ComponentType;
+	protected void Update()
+	{
+		transform.localPosition = bottomLeftPosition + new Vector3(TileCoords.Item1 - 1, TileCoords.Item2 - 1);
+		transform.localRotation = Quaternion.AngleAxis(90 * rotationCount, Vector3.back);
+	}
+
+	public abstract ComponentType ComponentType { get; }
+
+	public void SetCoords(int coordX, int coordY)
+	{
+		TileCoords = new Tuple<int, int>(coordX, coordY);
+	}
+
+	public void SetLevelBottomLeftPosition(Vector3 bottomLeftPosition)
+	{
+		this.bottomLeftPosition = bottomLeftPosition;
+	}
+
+	protected Vector3 bottomLeftPosition;
 
 	public Tuple<int, int> TileCoords { get; protected set; }
 

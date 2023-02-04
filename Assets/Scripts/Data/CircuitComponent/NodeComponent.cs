@@ -3,10 +3,7 @@ using static Constants;
 
 public class NodeComponent : BaseCircuitComponent
 {
-	public NodeComponent(int coordX, int coordY)
-		: base(ComponentType.NODE, coordX, coordY)
-	{
-	}
+	public override ComponentType ComponentType => ComponentType.NODE;
 
 	protected override void SetupConnectedTiles()
 	{

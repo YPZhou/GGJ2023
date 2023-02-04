@@ -3,10 +3,7 @@ using static Constants;
 
 public class OutputComponent : BaseCircuitComponent
 {
-	public OutputComponent(int coordX, int coordY)
-		: base(ComponentType.OUTPUT, coordX, coordY)
-	{
-	}
+	public override ComponentType ComponentType => ComponentType.OUTPUT;
 
 	protected override void SetupConnectedTiles()
 	{
