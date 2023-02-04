@@ -7,7 +7,12 @@ public class GameTitleController : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.Alpha1))
 		{
-			SceneManager.LoadScene("Level1");
+			
 		}
+	}
+
+	public void StartGame()
+	{
+		SceneManager.LoadScene("Level1");
 	}
 }

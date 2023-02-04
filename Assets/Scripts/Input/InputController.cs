@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class InputController : MonoBehaviour
@@ -6,8 +7,13 @@ public class InputController : MonoBehaviour
     private BaseCircuitComponent selectedNode;
 
     private Color originColor;
-    
-    
+
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     private void Update()
     {
         ClickNodeUpdate();

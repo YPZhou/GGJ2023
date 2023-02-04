@@ -217,7 +217,6 @@ GameObject:
   m_Component:
   - component: {fileID: 924473720}
   - component: {fileID: 924473721}
-  - component: {fileID: 924473722}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -254,15 +253,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelWidth: 7
   levelHeight: 3
---- !u!114 &924473722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 924473718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57b5567ca98f4573bf521c096ab9381f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
