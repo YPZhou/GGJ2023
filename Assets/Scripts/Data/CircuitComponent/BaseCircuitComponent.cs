@@ -15,6 +15,12 @@ public abstract class BaseCircuitComponent : MonoBehaviour
 	{
 		transform.localPosition = bottomLeftPosition + new Vector3(TileCoords.Item1 - 1, TileCoords.Item2 - 1);
 		transform.localRotation = Quaternion.AngleAxis(90 * rotationCount, Vector3.back);
+
+		UpdateCore();
+	}
+
+	protected virtual void UpdateCore()
+	{
 	}
 
 	public abstract ComponentType ComponentType { get; }
@@ -68,5 +74,12 @@ public abstract class BaseCircuitComponent : MonoBehaviour
 		otherComponent.TileCoords = new Tuple<int, int>(tempCoords.Item1, tempCoords.Item2);
 	}
 
-	public bool IsConnected(BaseCircuitComponent otherComponent) => CalculatedConnectedTiles.Contains(otherComponent.TileCoords) && otherComponent.CalculatedConnectedTiles.Contains(TileCoords);
+	public bool IsAdjacent(BaseCircuitComponent otherComponent) => CalculatedConnectedTiles.Contains(otherComponent.TileCoords) && otherComponent.CalculatedConnectedTiles.Contains(TileCoords);
+
+	public void SetConnectivity(bool isConnected)
+	{
+		IsConnected = isConnected;
+	}
+
+	public bool IsConnected { get; private set; }
 }

@@ -71,6 +71,36 @@ public abstract class BaseLevelController : MonoBehaviour
 
 	public Vector3 BottomLeftPosition => new Vector3(-levelWidth / 2, -levelHeight / 2);
 
+	public void CheckConnectivity()
+	{
+		var inputComponents = CircuitComponents.Where(component => component.ComponentType == ComponentType.INPUT);
+		var outputComponents = CircuitComponents.Where(component => component.ComponentType == ComponentType.OUTPUT);
+
+		foreach (var inputComponent in inputComponents)
+		{
+			if (outputComponents.Any(outputComponent => HasPath(inputComponent, outputComponent)))
+			{
+				inputComponent.SetConnectivity(true);
+			}
+			else
+			{
+				inputComponent.SetConnectivity(false);
+			}
+		}
+
+		foreach (var outputComponent in outputComponents)
+		{
+			if (inputComponents.Any(inputComponent => HasPath(inputComponent, outputComponent)))
+			{
+				outputComponent.SetConnectivity(true);
+			}
+			else
+			{
+				outputComponent.SetConnectivity(false);
+			}
+		}
+	}
+
 	public bool IsConnected
 	{
 		get
@@ -103,7 +133,7 @@ public abstract class BaseLevelController : MonoBehaviour
 			{
 				if (component != currentComponent && !visitedComponents.Contains(component))
 				{
-					if (currentComponent.IsConnected(component))
+					if (currentComponent.IsAdjacent(component))
 					{
 						openComponents.Add(component);
 					}

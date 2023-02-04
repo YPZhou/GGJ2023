@@ -35,6 +35,7 @@ public class InputController : MonoBehaviour
             }
             node.RotateClockwise();
             UnSelectNode();
+            CheckLevelConnectivity();
         }
         
     }
@@ -64,6 +65,7 @@ public class InputController : MonoBehaviour
             else
             {
                 selectedNode.Swap(node);
+                CheckLevelConnectivity();
             }
         }
 
@@ -88,6 +90,12 @@ public class InputController : MonoBehaviour
         var sr = selectedNode.GetComponent<SpriteRenderer>();
         sr.color = originColor;
         selectedNode = null;
+    }
+
+    void CheckLevelConnectivity()
+    {
+        var levelController = GameObject.Find("Scripts").GetComponent<BaseLevelController>();
+        levelController.CheckConnectivity();
     }
 
     BaseCircuitComponent GetNodeByMousePosition()
