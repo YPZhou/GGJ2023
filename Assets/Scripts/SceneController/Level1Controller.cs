@@ -43,13 +43,11 @@ public class Level1Controller : BaseLevelController
 		var node = Instantiate(nodeComponent).GetComponent<NodeComponent>();
 		node.SetCoords(5, 2);
 		node.SetLevelBottomLeftPosition(BottomLeftPosition);
-		node.RotateClockwise();
 		CircuitComponents.Add(node);
 
 		node = Instantiate(nodeComponent).GetComponent<NodeComponent>();
 		node.SetCoords(3, 2);
 		node.SetLevelBottomLeftPosition(BottomLeftPosition);
-		node.RotateClockwise();
 		CircuitComponents.Add(node);
 	}
 
