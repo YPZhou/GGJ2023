@@ -5,6 +5,7 @@ using static Constants;
 public class TurningNodeComponent : BaseCircuitComponent
 {
 	public override ComponentType ComponentType => ComponentType.NODE;
+	
 
 	protected override void SetupConnectedTiles()
 	{
@@ -25,7 +26,12 @@ public class TurningNodeComponent : BaseCircuitComponent
 				cursor.enabled = false;
 			}
 		}
+		
+		
+		
 	}
+	
+	
 
 	[SerializeField]
 	SpriteRenderer cursor;

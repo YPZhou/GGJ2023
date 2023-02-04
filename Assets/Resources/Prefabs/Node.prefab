@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1157063984457920427}
   - component: {fileID: 1157063984457920426}
-  - component: {fileID: 8026317125987759469}
   - component: {fileID: 724508199840707462}
+  - component: {fileID: 479283191467290244}
+  - component: {fileID: 5030857880501654118}
   m_Layer: 0
   m_Name: Node
   m_TagString: Untagged
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 093dd1f307aa6f94092a4651a71cae5e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f1bbde73bbed804684de787a383c35b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,7 +88,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8026317125987759469
+--- !u!114 &724508199840707462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157063984457920425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9028b254ccf5f0d4b8ded47f1cdc47bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 7393350347229310981}
+--- !u!61 &479283191467290244
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,7 +118,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -113,19 +127,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &724508199840707462
-MonoBehaviour:
+--- !u!111 &5030857880501654118
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157063984457920425}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9028b254ccf5f0d4b8ded47f1cdc47bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursor: {fileID: 7393350347229310981}
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 793a5aaefd91d9a468894bdf50530abf, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 793a5aaefd91d9a468894bdf50530abf, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &8466720929960414093
 GameObject:
   m_ObjectHideFlags: 0

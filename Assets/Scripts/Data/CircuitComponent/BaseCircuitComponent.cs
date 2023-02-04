@@ -6,8 +6,13 @@ using static Constants;
 
 public abstract class BaseCircuitComponent : MonoBehaviour
 {
+
+	protected new Animation animation;
+	
 	protected void Awake()
 	{
+		animation = GetComponent<Animation>();
+		
 		SetupConnectedTiles();
 	}
 
@@ -65,6 +70,8 @@ public abstract class BaseCircuitComponent : MonoBehaviour
 		{
 			rotationCount = 0;
 		}
+
+		
 	}
 
 	public void Swap(BaseCircuitComponent otherComponent)
