@@ -10,4 +10,6 @@ public class Level2Controller : BaseLevelController
 			SceneManager.LoadScene("Level3");
 		}
 	}
+
+	protected override string NextLevelName => "Level3";
 }

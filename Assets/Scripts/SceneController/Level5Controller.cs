@@ -10,4 +10,6 @@ public class Level5Controller : BaseLevelController
 			SceneManager.LoadScene("GameTitle");
 		}
 	}
+
+	protected override string NextLevelName => "GameTitle";
 }
