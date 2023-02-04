@@ -31,9 +31,10 @@ public class SelectLevelPanel : MonoBehaviour
         }
     }
 
-    void OpenLevel(string name)
+    void OpenLevel(string levelName)
     {
-        SceneManager.LoadScene(name);
+        SceneManager.LoadScene(levelName);
     }
+
 
 }
