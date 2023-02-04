@@ -22,8 +22,23 @@ public class InputController : MonoBehaviour
 
     private void Update()
     {
+        CheckMouseHover();
         ClickNodeUpdate();
         SwapNodeUpdate();
+    }
+
+    void CheckMouseHover()
+    {
+        foreach (var circuitComponent in FindObjectsOfType<BaseCircuitComponent>())
+        {
+            circuitComponent.IsHovered = false;
+        }
+
+        var node = GetNodeByMousePosition();
+        if (node != null)
+        {
+            node.IsHovered = true;
+        }
     }
 
     /// <summary>

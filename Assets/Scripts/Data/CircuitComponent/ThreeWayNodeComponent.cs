@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 using static Constants;
 
 public class ThreeWayNodeComponent : BaseCircuitComponent
@@ -11,4 +12,22 @@ public class ThreeWayNodeComponent : BaseCircuitComponent
 		ConnectedTiles.Add(new Tuple<int, int>(1, 0));
 		ConnectedTiles.Add(new Tuple<int, int>(-1, 0));
 	}
+
+	protected override void UpdateCore()
+	{
+		if (cursor != null)
+		{
+			if (IsHovered)
+			{
+				cursor.enabled = true;
+			}
+			else
+			{
+				cursor.enabled = false;
+			}
+		}
+	}
+
+	[SerializeField]
+	SpriteRenderer cursor;
 }

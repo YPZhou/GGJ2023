@@ -82,4 +82,6 @@ public abstract class BaseCircuitComponent : MonoBehaviour
 	}
 
 	public bool IsConnected { get; private set; }
+
+	public bool IsHovered { get; set; }
 }
