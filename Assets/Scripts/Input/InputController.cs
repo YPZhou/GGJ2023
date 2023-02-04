@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class InputController : MonoBehaviour
@@ -11,7 +10,14 @@ public class InputController : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (GameObject.Find("Dont Destroy").GetComponent<InputController>() != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     private void Update()
