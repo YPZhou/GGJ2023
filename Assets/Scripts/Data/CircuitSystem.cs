@@ -33,7 +33,7 @@ public class CircuitSystem
 			// Add non-visited connected component to open list
 			foreach (var component in CircuitComponents)
 			{
-				if (!visitedComponents.Contains(component))
+				if (component != currentComponent && !visitedComponents.Contains(component))
 				{
 					if (currentComponent.IsConnected(component))
 					{
