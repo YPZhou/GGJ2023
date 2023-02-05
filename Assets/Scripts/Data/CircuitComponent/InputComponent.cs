@@ -13,6 +13,16 @@ public class InputComponent : BaseCircuitComponent
 
 	protected override void UpdateCore()
 	{
+		if (connectedMark != null)
+		{
+			connectedMark.transform.rotation = Quaternion.identity;
+		}
+
+		if (disconnectedMark != null)
+		{
+			disconnectedMark.transform.rotation = Quaternion.identity;
+		}
+
 		if (IsConnected)
 		{
 			if (connectedMark != null)
