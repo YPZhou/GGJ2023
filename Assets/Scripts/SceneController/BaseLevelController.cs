@@ -11,6 +11,7 @@ public abstract class BaseLevelController : MonoBehaviour
 	{
 		LoadLevelResources();
 		InitializeLevelComponents();
+		CheckConnectivity();
 	}
 
 	protected virtual void LoadLevelResources()
@@ -110,8 +111,9 @@ public abstract class BaseLevelController : MonoBehaviour
 			var outputComponents = CircuitComponents.Where(component => component.ComponentType == ComponentType.OUTPUT);
 			if (inputComponents.Any() && outputComponents.Any())
 			{
-				result = outputComponents.All(outputComponent => inputComponents.Any(inputComponent => HasPath(inputComponent, outputComponent)))
-					&& inputComponents.All(inputComponent => outputComponents.Any(outputComponent => HasPath(inputComponent, outputComponent)));
+				//result = outputComponents.All(outputComponent => inputComponents.Any(inputComponent => HasPath(inputComponent, outputComponent)))
+				//	&& inputComponents.All(inputComponent => outputComponents.Any(outputComponent => HasPath(inputComponent, outputComponent)));
+				result = outputComponents.All(outputComponent => outputComponent.IsConnected) && inputComponents.All(inputComponent => inputComponent.IsConnected);
 			}
 
 			return result;
