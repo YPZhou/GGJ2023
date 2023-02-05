@@ -313,6 +313,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 509844720}
     m_Modifications:
+    - target: {fileID: 1063061575973090909, guid: 26e9fef1a99295844910692351e519ab, type: 3}
+      propertyPath: m_Text
+      value: "\u9009\u62E9\u6545\u969C\u670D\u52A1\u5668"
+      objectReference: {fileID: 0}
     - target: {fileID: 3837778396062672989, guid: 26e9fef1a99295844910692351e519ab, type: 3}
       propertyPath: m_Name
       value: GameTitle
@@ -347,7 +351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8482819788754902326, guid: 26e9fef1a99295844910692351e519ab, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 8482819788754902326, guid: 26e9fef1a99295844910692351e519ab, type: 3}
       propertyPath: m_SizeDelta.y

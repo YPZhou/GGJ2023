@@ -26,7 +26,7 @@ public class SelectLevelPanel : MonoBehaviour
             {
                 OpenLevel(level.name);
             });
-            text.text = level.name;
+            text.text = string.Format("·þÎñÆ÷ {0}", level.name.Substring(5));
 
         }
     }

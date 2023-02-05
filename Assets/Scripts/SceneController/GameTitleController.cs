@@ -18,11 +18,11 @@ public class GameTitleController : MonoBehaviour
 
 	public void GameOver()
 	{
-		#if UNITY_EDITOR
+#if UNITY_EDITOR
+		UnityEditor.EditorApplication.isPlaying = false;
+#else
 		Application.Quit();
-		#else
-		
-		#endif
+#endif
 	}
-	
+
 }
