@@ -89,6 +89,7 @@ public class InputController : MonoBehaviour
 			{
 				SoundManager.PlayAudio("Swap");
 				selectedNode.Swap(node);
+				UnSelectNode();
 				CheckLevelConnectivity();
 			}
 		}
