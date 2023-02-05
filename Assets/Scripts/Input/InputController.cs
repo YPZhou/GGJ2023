@@ -34,6 +34,7 @@ public class InputController : MonoBehaviour
 
 				if (levelController.IsConnected)
 				{
+					GameObject.Find("InputInstruction").GetComponent<FadeController>().PowerOff();
 					SoundManager.PlayAudio("CircuitConnected");
 				}
 			}

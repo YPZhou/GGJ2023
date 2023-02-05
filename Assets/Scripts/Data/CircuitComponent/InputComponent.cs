@@ -25,6 +25,11 @@ public class InputComponent : BaseCircuitComponent
 
 		if (IsConnected)
 		{
+			if (cabinet_on != null)
+            {
+				gameObject.GetComponent<SpriteRenderer>().sprite = cabinet_on;
+            }
+
 			if (connectedMark != null)
 			{
 				connectedMark.enabled = true;
@@ -37,6 +42,11 @@ public class InputComponent : BaseCircuitComponent
 		}
 		else
 		{
+			if (cabinet_off != null)
+			{
+				gameObject.GetComponent<SpriteRenderer>().sprite = cabinet_off;
+			}
+
 			if (connectedMark != null)
 			{
 				connectedMark.enabled = false;
@@ -54,4 +64,9 @@ public class InputComponent : BaseCircuitComponent
 
 	[SerializeField]
 	SpriteRenderer disconnectedMark;
+
+	[SerializeField]
+	Sprite cabinet_off;
+	[SerializeField]
+	Sprite cabinet_on;
 }
