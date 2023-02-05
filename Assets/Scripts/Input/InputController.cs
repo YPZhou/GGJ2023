@@ -22,9 +22,22 @@ public class InputController : MonoBehaviour
 
 	private void Update()
 	{
-		CheckMouseHover();
-		ClickNodeUpdate();
-		SwapNodeUpdate();
+		var scriptsObject = GameObject.Find("Scripts");
+		if (scriptsObject != null)
+		{
+			var levelController = scriptsObject.GetComponent<BaseLevelController>();
+			if (levelController != null && !levelController.IsConnected)
+			{
+				CheckMouseHover();
+				ClickNodeUpdate();
+				SwapNodeUpdate();
+
+				if (levelController.IsConnected)
+				{
+					SoundManager.PlayAudio("CircuitConnected");
+				}
+			}
+		}
 	}
 
 	void CheckMouseHover()

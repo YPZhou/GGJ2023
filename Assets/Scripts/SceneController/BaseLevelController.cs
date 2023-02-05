@@ -63,7 +63,7 @@ public abstract class BaseLevelController : MonoBehaviour
 
 	IEnumerator StartNextLevelCoroutine()
 	{
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(2f);
 		SceneManager.LoadScene(NextLevelName);
 	}
 
