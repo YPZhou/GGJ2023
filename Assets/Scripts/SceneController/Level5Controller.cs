@@ -338,5 +338,5 @@ public class Level5Controller : BaseLevelController
 		}
 	}
 
-	protected override string NextLevelName => "GameTitle";
+	protected override string NextLevelName => "GameWin";
 }

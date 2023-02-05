@@ -19,6 +19,10 @@ public class BackButton : MonoBehaviour
         {
             SceneManager.LoadScene("GameTitle");
         }
+        else if (sceneName.Equals("GameWin"))
+        {
+			SceneManager.LoadScene("GameTitle");
+		}
         else
         {
             SceneManager.LoadScene("SelectLevel");
