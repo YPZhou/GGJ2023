@@ -174,11 +174,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - {fileID: 102900000, guid: b196196d1d2b34b4a88f2148ab66cf5e, type: 3}
-  - {fileID: 102900000, guid: 52c99686bd6a765489efd062c2eaa39b, type: 3}
-  - {fileID: 102900000, guid: 7f0f40c7c42d1174f987ac5c2a42db8f, type: 3}
-  - {fileID: 102900000, guid: 3c12dc240a0758b42abbc56e9d065e57, type: 3}
-  - {fileID: 102900000, guid: b8240838d79cd51438121c81f2f945f9, type: 3}
+  - Level1
+  - Level2
+  - Level3
+  - Level4
+  - Level5
   buttonPrefab: {fileID: 3901387711285727941, guid: 1f22aa1e8931e4840a7833264da73033, type: 3}
 --- !u!114 &155666681
 MonoBehaviour:

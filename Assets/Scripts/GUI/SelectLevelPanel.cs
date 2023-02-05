@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,7 +6,7 @@ using UnityEngine.UI;
 public class SelectLevelPanel : MonoBehaviour
 {
     [SerializeField]
-    public List<SceneAsset> levels;
+    public List<string> levels;
 
     [SerializeField]
     public GameObject buttonPrefab;
@@ -24,9 +23,9 @@ public class SelectLevelPanel : MonoBehaviour
 
             button.onClick.AddListener(() =>
             {
-                OpenLevel(level.name);
+                OpenLevel(level);
             });
-            text.text = string.Format("服务器 {0}", level.name.Substring(5));
+            text.text = string.Format("服务器 {0}", level.Substring(5));
 
         }
     }
